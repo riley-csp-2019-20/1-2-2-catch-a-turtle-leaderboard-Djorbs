@@ -8,7 +8,7 @@ size = 2
 color = "brown"
 score = 0
 font_setup = ("Arial", 20, "normal")
-timer = 20
+timer = 5
 counter_interval = 1000   #1000 represents 1 second
 timer_up = False
 #leaderboard variables
@@ -76,7 +76,7 @@ def manage_leaderboard():
   global leader_scores_list
   global leader_names_list
   global score
-  global giorno
+  global scorer
 
   # load all the leaderboard records into the lists
   lb.load_leaderboard(leaderboard_file_name, leader_names_list, leader_scores_list)
@@ -84,13 +84,13 @@ def manage_leaderboard():
   # TODO
   if (len(leader_scores_list) < 5 or score > leader_scores_list[4]):
     lb.update_leaderboard(leaderboard_file_name, leader_names_list, leader_scores_list, player_name, score)
-    lb.draw_leaderboard(leader_names_list, leader_scores_list, True, giorno, score)
+    lb.draw_leaderboard(leader_names_list, leader_scores_list, True, scorer, score)
 
   else:
-    lb.draw_leaderboard(leader_names_list, leader_scores_list, False, giorno, score)
+    lb.draw_leaderboard(leader_names_list, leader_scores_list, False, scorer, score)
 
 #-----events----------------
-wack.onclick(turtlebooped)
+polnareff.onclick(turtlebooped)
 wn = trtl.Screen()
 wn.ontimer(countdown, counter_interval) 
 wn.mainloop()

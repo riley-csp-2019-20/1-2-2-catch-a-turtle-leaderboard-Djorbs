@@ -8,11 +8,11 @@ size = 2
 color = "brown"
 score = 0
 font_setup = ("Arial", 20, "normal")
-timer = 5
+timer = 20
 counter_interval = 1000   #1000 represents 1 second
 timer_up = False
 #leaderboard variables
-leaderboard_file_name = "a112_leaderboard.txt"
+leaderboard_file_name = "a122_leaderboard.txt"
 leader_names_list = []
 leader_scores_list = []
 player_name = input("Please enter your name~ ")
@@ -62,7 +62,7 @@ def score_count():
   scorer.clear()
   scorer.write(score, font = font)
 def runturtlerun():
-  wn.bgcolor(random_color())#This is my customization. The background changes to a random color when the game ends.
+  wn.bgcolor(random_color())#This is my customization. The background changes to a random color when the game ends.a
   polnareff.ht
   polnareff.goto(999, 999)
 def random_color(): #This is my customization. The turtle changes color everytime it is clicked.

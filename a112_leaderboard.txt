@@ -1,3 +1,0 @@
-Joe,10
-Mama,8
-Tom,4
